@@ -18,7 +18,7 @@ import org.opencv.imgcodecs.Imgcodecs;
  */
 public class FaceRecognitionEigenFaces {
 
-	public static String csvFilePath = "src/main/java/resources/FaceRecognition/TrainingData.txt";
+	public static String csvFilePath = "src/main/java/resources/FaceRecognition/TrainingData.csv";
 
 	public static void main(String[] args) {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
