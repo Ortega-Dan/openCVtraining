@@ -12,6 +12,10 @@ import org.opencv.core.MatOfInt;
 import org.opencv.face.EigenFaceRecognizer;
 import org.opencv.imgcodecs.Imgcodecs;
 
+/**
+ * THE PROGRAM IN THIS FILE IS INTENDED TO RECOGNIZE A SPECIFIC FACE RATHER THAN
+ * DETECTING FACES
+ */
 public class FaceRecognitionEigenFaces {
 
 	public static String csvFilePath = "src/main/java/resources/FaceRecognition/TrainingData.txt";

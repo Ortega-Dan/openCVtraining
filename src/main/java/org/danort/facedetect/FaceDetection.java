@@ -17,6 +17,10 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.objdetect.Objdetect;
 
+/**
+ * THE PROGRAM IN THIS FILE IS INTENDED TO JUST RECOGNIZE FACES IN IMAGES FROM
+ * AN OPENCV PRETRAINED MODEL OF FACES
+ */
 public class FaceDetection {
 
 	public static String classifierPath1;
@@ -26,9 +30,16 @@ public class FaceDetection {
 	public static void main(String[] args) {
 		try {
 
-			classifierPath1 = args[0];
-			inpImgFilename = args[1];
-			opImgFilename = args[2];
+			// path to the pretrained model, more models are found somewhere within opencv
+			// installed files under "haarcascades" directory
+			classifierPath1 = "src/main/java/resources/FaceDetection/haarcascade_frontalface_alt.xml";
+			inpImgFilename = "src/main/java/resources/FaceDetection/input1.jpg";
+			// inpImgFilename = "src/main/java/resources/FaceDetection/input2.jpg";
+			opImgFilename = "src/main/java/resources/FaceDetection/output.jpg";
+
+			// classifierPath1 = args[0];
+			// inpImgFilename = args[1];
+			// opImgFilename = args[2];
 
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 			System.out.println("Library loaded..");
