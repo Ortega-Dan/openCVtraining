@@ -8,3 +8,4 @@ library was compiled with Java 13
 
 ...
 Open cv code is from the following article by Manish Bansal
+https://www.freecodecamp.org/news/facial-recognition-using-opencv-in-java-92fa40c22f62/
