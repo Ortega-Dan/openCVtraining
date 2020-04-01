@@ -19,12 +19,17 @@ import org.opencv.objdetect.Objdetect;
 
 public class FaceDetection {
 
-	public static String classifierPath1 = "src/main/java/resources/FaceDetection/haarcascade_frontalface_alt.xml";
-	public static String inpImgFilename = "src/main/java/resources/FaceDetection/input.jpg";
-	public static String opImgFilename = "src/main/java/resources/FaceDetection/output2.jpg";
+	public static String classifierPath1;
+	public static String inpImgFilename;
+	public static String opImgFilename;
 
 	public static void main(String[] args) {
 		try {
+
+			classifierPath1 = args[0];
+			inpImgFilename = args[1];
+			opImgFilename = args[2];
+
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 			System.out.println("Library loaded..");
 			Mat frame = Imgcodecs.imread(inpImgFilename, 1);
