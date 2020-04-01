@@ -6,18 +6,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfInt;
 import org.opencv.face.EigenFaceRecognizer;
 import org.opencv.imgcodecs.Imgcodecs;
 
 public class FaceRecognitionEigenFaces {
-	public static String basePath=System.getProperty("user.dir");
+	
 
-	public static String csvFilePath=basePath+"\\src\\resources\\FaceRecognition\\TrainingData.txt";
+	public static String csvFilePath="src/main/java/resources/FaceRecognition/TrainingData.txt";
 	public static void main(String[] args) {
-		System.out.println("Loading library..");
-		System.loadLibrary("libopencv_java342");
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		System.out.println("Library loaded!!");
 		ArrayList<Mat> images=new ArrayList<>();
 		ArrayList<Integer> labels=new ArrayList<>();

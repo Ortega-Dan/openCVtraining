@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 import org.danort.utils.Utils;
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
 import org.opencv.core.Rect;
@@ -20,16 +21,15 @@ import org.opencv.objdetect.Objdetect;
 
 public class FaceDetection {
 
-	public static String basePath=System.getProperty("user.dir");
-	public static String classifierPath1=basePath+"\\src\\resources\\FaceDetection\\haarcascade_frontalface_alt.xml";
-	public static String inpImgFilename=basePath+"\\src\\resources\\FaceDetection\\input.jpg";
-	public static String opImgFilename=basePath+"\\src\\resources\\FaceDetection\\output.jpg";
+	public static String classifierPath1="src/main/java/resources/FaceDetection/haarcascade_frontalface_alt.xml";
+	public static String inpImgFilename="src/main/java/resources/FaceDetection/input.jpg";
+	public static String opImgFilename="src/main/java/resources/FaceDetection/output2.jpg";
 
 
 
 	public static void main(String[] args) {
 		try {
-			System.loadLibrary("libopencv_java342");
+			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 			System.out.println("Library loaded..");
 			Mat frame=Imgcodecs.imread(inpImgFilename, 1);
 			if (!frame.empty())

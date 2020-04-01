@@ -8,16 +8,17 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 
 public class PGMToJPGConverter {
-	public static String basePath=System.getProperty("user.dir");
 
-	public static String csvFilePath=basePath+"\\src\\resources\\FaceRecognition\\TrainingData.txt";
+
+	public static String csvFilePath="src/main/java/resources/FaceRecognition/TrainingData.txt";
 	public static void main(String[] args) {
-		System.out.println("Loading library..");
-		System.loadLibrary("libopencv_java342");
+		
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		System.out.println("Library loaded!!");		
 			readCSVAndConvertPGMToJPG(csvFilePath);
 			System.out.println("Image conversion done!");
