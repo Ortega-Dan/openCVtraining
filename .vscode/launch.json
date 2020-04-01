@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<opencv>",
+            "request": "launch",
+            "mainClass": "org.danort.App",
+            "projectName": "opencv",
+            "args": "src/main/java/resources/FaceDetection/haarcascade_frontalface_alt.xml src/main/java/resources/FaceDetection/input.jpg src/main/java/resources/FaceDetection/output.jpg"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FaceDetection<opencv>",
+            "request": "launch",
+            "mainClass": "org.danort.facedetect.FaceDetection",
+            "projectName": "opencv",
+            "args": "src/main/java/resources/FaceDetection/haarcascade_frontalface_alt.xml src/main/java/resources/FaceDetection/input.jpg src/main/java/resources/FaceDetection/output.jpg"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FaceRecognitionEigenFaces<opencv>",
+            "request": "launch",
+            "mainClass": "org.danort.facerecognition.FaceRecognitionEigenFaces",
+            "projectName": "opencv"
+        }
+    ]
+}
