@@ -14,30 +14,31 @@ import org.opencv.imgcodecs.Imgcodecs;
 
 public class PGMToJPGConverter {
 
+	public static String csvFilePath = "src/main/java/resources/FaceRecognition/TrainingData.txt";
 
-	public static String csvFilePath="src/main/java/resources/FaceRecognition/TrainingData.txt";
 	public static void main(String[] args) {
-		
+
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-		System.out.println("Library loaded!!");		
-			readCSVAndConvertPGMToJPG(csvFilePath);
-			System.out.println("Image conversion done!");
+		System.out.println("Library loaded!!");
+		readCSVAndConvertPGMToJPG(csvFilePath);
+		System.out.println("Image conversion done!");
 	}
-	private static void readCSVAndConvertPGMToJPG(String csvFilePath2)  {
+
+	private static void readCSVAndConvertPGMToJPG(String csvFilePath2) {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(csvFilePath2));
-		
-		String line;
-		while((line=br.readLine())!=null){
-			String[] tokens=line.split("\\;");
-			File grayOutputfile = new File(tokens[0].substring(0,tokens[0].length()-4)+".jpg");
 
-			Mat readImage=Imgcodecs.imread(tokens[0], 0);
-			Utils.matToBufferedImage(readImage);
-		   ImageIO.write(Utils.matToBufferedImage(readImage), "jpg", grayOutputfile);
+			String line;
+			while ((line = br.readLine()) != null) {
+				String[] tokens = line.split("\\;");
+				File grayOutputfile = new File(tokens[0].substring(0, tokens[0].length() - 4) + ".jpg");
 
-		}
+				Mat readImage = Imgcodecs.imread(tokens[0], 0);
+				Utils.matToBufferedImage(readImage);
+				ImageIO.write(Utils.matToBufferedImage(readImage), "jpg", grayOutputfile);
+
+			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (NumberFormatException e) {
@@ -45,6 +46,6 @@ public class PGMToJPGConverter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 }
