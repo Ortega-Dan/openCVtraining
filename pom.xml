@@ -45,7 +45,7 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>org.danort.App</mainClass>
+                <mainClass>org.danort.facedetect.FaceDetection</mainClass>
               </manifest>
             </archive>
             <descriptorRefs>
