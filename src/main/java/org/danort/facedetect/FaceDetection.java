@@ -32,9 +32,9 @@ public class FaceDetection {
 
 			// path to the pretrained model, more models are found somewhere within opencv
 			// installed files under "haarcascades" directory
-			classifierPath1 = "src/main/java/resources/FaceDetection/haarcascade_frontalface_alt.xml";
-			inpImgFilename = "src/main/java/resources/FaceDetection/input1.jpg";
-			// inpImgFilename = "src/main/java/resources/FaceDetection/input2.jpg";
+			classifierPath1 = "src/main/java/resources/FaceDetection/haarcascade_frontalface_default.xml";
+			// inpImgFilename = "src/main/java/resources/FaceDetection/input1.jpg";
+			inpImgFilename = "src/main/java/resources/FaceDetection/input2.jpg";
 			opImgFilename = "src/main/java/resources/FaceDetection/output.jpg";
 
 			// classifierPath1 = args[0];
