@@ -5,7 +5,7 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-public class ImageBinarization {
+public class ImageBasicBinarization {
 
     public static void main(String[] args) {
 
