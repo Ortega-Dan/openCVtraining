@@ -17,6 +17,8 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.objdetect.Objdetect;
 
+import nu.pattern.OpenCV;
+
 /**
  * THE PROGRAM IN THIS FILE IS INTENDED TO JUST RECOGNIZE FACES IN IMAGES FROM
  * AN OPENCV PRETRAINED MODEL OF FACES
@@ -40,7 +42,7 @@ public class FaceDetection {
 			// classifierPath1 = args[0];
 			// inpImgFilename = args[1];
 			// opImgFilename = args[2];
-
+			OpenCV.loadShared();
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 			System.out.println("Library loaded..");
 			Mat frame = Imgcodecs.imread(inpImgFilename, 1);

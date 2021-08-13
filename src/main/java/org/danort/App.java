@@ -4,6 +4,8 @@ import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 
+import nu.pattern.OpenCV;
+
 /**
  * Hello world!
  *
@@ -16,6 +18,7 @@ public class App {
 
         // The native native java-binder library must be found by the system from path
         // or the execution directory
+        OpenCV.loadShared();
 
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         Mat mat = Mat.eye(3, 3, CvType.CV_8UC1);
