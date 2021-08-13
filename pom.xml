@@ -5,9 +5,9 @@
 
   <groupId>org.danort</groupId>
   <artifactId>opencv</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
-  <name>opencv</name>
+  <name>opencvJava</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
